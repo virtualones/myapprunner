@@ -1,13 +1,7 @@
-# Query: 
-# ContextLines: 1
-
-# apprunner.yaml
 version: 1.0
 runtime: python3
 build:
   commands:
-    - pip3 install -r requirements.txt
+    - echo "Build step"
 run:
-  command: gunicorn --bind 0.0.0.0:8080 app:app
-  network:
-    port: 8080
+  command: python app.py
